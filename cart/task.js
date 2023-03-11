@@ -38,12 +38,12 @@ function funcAddToCard(el, index) {
         return
     } else {
 
-        squ = document.createElement('div')//Первичное создание карточки в корзине
-        squ.classList.add('cart__product')
-        squ.innerHTML = `<img class='cart__product-image' src=${products[index].querySelector('.product__image').src}>
+        card = document.createElement('div')//Первичное создание карточки в корзине
+        card.classList.add('cart__product')
+        card.innerHTML = `<img class='cart__product-image' src=${products[index].querySelector('.product__image').src}>
                 <div class='cart__product-count'>${products[index].querySelector('.product__quantity-value').textContent}</div>`
-        squ.setAttribute('data-id', `${products[index].getAttribute('data-id')}`)
-        cards.append(squ)
+        card.setAttribute('data-id', `${products[index].getAttribute('data-id')}`)
+        cards.append(card)
         return
     };
 }
