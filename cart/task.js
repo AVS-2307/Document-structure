@@ -39,11 +39,11 @@ function funcAddToCard(el, index) {
     } else {
 
         card = document.createElement('div')//Первичное создание карточки в корзине
-        card.classList.add('cart__product')
+        card.classList.add('cart__product');
         card.innerHTML = `<img class='cart__product-image' src=${products[index].querySelector('.product__image').src}>
                 <div class='cart__product-count'>${products[index].querySelector('.product__quantity-value').textContent}</div>`
-        card.setAttribute('data-id', `${products[index].getAttribute('data-id')}`)
-        cards.append(card)
+        card.setAttribute('data-id', `${products[index].getAttribute('data-id')}`);
+        cards.append(card);
         return
     };
 }
