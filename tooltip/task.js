@@ -8,7 +8,7 @@ document.addEventListener("click", e => {  //слушаем клики по до
 
 function tooltipShow(link) {
 
-  /*   if (!document.querySelector('.tooltip')) { //если еще нет div с подсказкой, то создаем
+/*     if (!document.querySelector('.tooltip')) { //если еще нет div с подсказкой, то создаем
         tooltipCreate(link);
     } */
 
@@ -23,16 +23,16 @@ function tooltipShow(link) {
         tooltip.classList.add('tooltip_active');
         tooltip.style.left = dataPosition.left + "px";
         tooltip.style.top = dataPosition.bottom + "px";
-    }
-}
+    };
+};
 
 function tooltipHide(link) {
     link.classList.remove('tooltip_active');
     link.textContent = ""
-}
+};
 
 /* function tooltipCreate() {
     const tooltip = document.createElement('div');
     tooltip.classList.add('tooltip');
     document.body.append(tooltip);
-} */
+};  */
