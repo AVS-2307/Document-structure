@@ -17,20 +17,20 @@ function addTaskByClick() {
                         </div>
             `;
             text.value = '';
-            e.preventDefault();
+            //e.preventDefault();
         }
         
     });
 };
 
-function addTaskByEnter() {
+/* function addTaskByEnter() {
     text.addEventListener('keypress', (e) => {
         const str = text.value; // для обхода ввода пустой строки и пробелов пользователем
         if (e.key == 'Enter' && str.trim() != '') {            
             addTaskByClick();
         }    
 });
-};
+}; */
 
 function removeTask() {
     document.addEventListener('click', (e) => 
@@ -40,5 +40,5 @@ function removeTask() {
 };
 
 addTaskByClick();
-addTaskByEnter();
+//addTaskByEnter();
 removeTask();
