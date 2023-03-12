@@ -35,7 +35,6 @@ function funcAddToCard(el, index) {
 
     if (productInCart) {
         productInCart.querySelector('.cart__product-count').textContent = Number(productInCart.querySelector('.cart__product-count').textContent) + Number(products[index].querySelector('.product__quantity-value').textContent)
-        return
     } else {
 
         card = document.createElement('div')//Первичное создание карточки в корзине
@@ -44,6 +43,5 @@ function funcAddToCard(el, index) {
                 <div class='cart__product-count'>${products[index].querySelector('.product__quantity-value').textContent}</div>`
         card.setAttribute('data-id', `${products[index].getAttribute('data-id')}`);
         cards.append(card);
-        return
     };
 }
