@@ -1,9 +1,7 @@
-const text = document.querySelector( '.tasks__input');
-const tasksList  = document.querySelector( '.tasks__list');
-const btn = document.querySelector('.tasks__add');
-const taskRemove = document.querySelector('.task__remove');
-
 function addTaskByClick() {
+    const text = document.querySelector( '.tasks__input');
+    const tasksList  = document.querySelector( '.tasks__list');
+    const btn = document.querySelector('.tasks__add');
     btn.addEventListener('click', (e) => {
         const str = text.value; // для обхода ввода пустой строки и пробелов пользователем
         if (str.trim() != '') {            
@@ -16,23 +14,13 @@ function addTaskByClick() {
                         <a href="#" class="task__remove">&times;</a>
                         </div>
             `;
-            text.value = '';
-            //e.preventDefault();
+            text.value = '';            
         }
-        
+        e.preventDefault();        
     });
 };
 
-/* function addTaskByEnter() {
-    text.addEventListener('keypress', (e) => {
-        const str = text.value; // для обхода ввода пустой строки и пробелов пользователем
-        if (e.key == 'Enter' && str.trim() != '') {            
-            addTaskByClick();
-        }    
-});
-}; */
-
-function removeTask() {
+function removeTask() {    
     document.addEventListener('click', (e) => 
     {if (e.target.classList.contains("task__remove")) {
         e.target.parentNode.remove()};
@@ -40,5 +28,4 @@ function removeTask() {
 };
 
 addTaskByClick();
-//addTaskByEnter();
 removeTask();
